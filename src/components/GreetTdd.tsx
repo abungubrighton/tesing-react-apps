@@ -1,6 +1,5 @@
-type GreetProps = {
-    name?: string
-}
+import { GreetProps } from "./greet.types";
+
 
 function GreetTdd(props: GreetProps) {
     return (
