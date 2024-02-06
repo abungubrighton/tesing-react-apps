@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Application = () => {
   return (
     <div>
@@ -20,7 +18,11 @@ export const Application = () => {
             onChange={() => {}}
           />
         </div>
-        
+        <div>
+          <label htmlFor="bio">Bio</label>
+          <textarea name="bio" id="bio"></textarea>
+        </div>
+
         <div>
           <label htmlFor="job-location">Job location</label>
           <select id="job-location">
@@ -43,4 +45,3 @@ export const Application = () => {
     </div>
   );
 };
-
