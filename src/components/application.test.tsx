@@ -3,6 +3,18 @@ import { Application } from "./Application";
 describe("Application component", () => {
     test("Application renders correctly", () => {
         render(<Application />);
+        let pageHeading = screen.getByRole("heading", {
+            level: 1,
+            name: "Job Application", // Specify the text content of the heading
+        });
+        expect(pageHeading).toBeInTheDocument();
+
+        let sectionHeading = screen.getByRole("heading", {
+            level: 2,
+            name: "Section 1" // Specify the text content of the heading
+        });
+        expect(sectionHeading).toBeInTheDocument();
+        
         let nameElement = screen.getByRole("textbox", {
             name: "Name",
         });
