@@ -36,5 +36,13 @@ describe("Application component", () => {
         // check that the Submit button element is also in the document
         let submitButtonElement = screen.getByRole("button");
         expect(submitButtonElement).toBeInTheDocument();
+
+        // GET BY LABEL TEXT
+        let nameElement2 = screen.getByLabelText("Name");
+        expect(nameElement2).toBeInTheDocument();
+
+        // wrapper label
+        let termsElement2 = screen.getByLabelText("I agree to the terms and conditions");
+        expect(termsElement2).toBeInTheDocument();
     });
 });
